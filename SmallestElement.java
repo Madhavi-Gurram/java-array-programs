@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class SmallestElement {
+    public static int findSmallest(int[] arr) {
+        int smallest = Integer.MAX_VALUE;
+        for (int num : arr) {
+            if (num < smallest) {
+                smallest = num;
+            }
+        }
+        return smallest;
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n = scan.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scan.nextInt();
+        }
+        System.out.println("Smallest Element: " + findSmallest(arr));
+    }
+}
